@@ -54,9 +54,9 @@ header {
     text-shadow: var(--shadow-pop);
 }
 
-.logo span {
-    color: var(--luigi-green);
-}
+    .logo span {
+        color: var(--luigi-green);
+    }
 
 nav a {
     font-family: 'Shantell Sans', sans-serif;
@@ -71,32 +71,32 @@ nav a {
     z-index: 1;
 }
 
-nav a:hover {
-    color: var(--text-light);
-}
+    nav a:hover {
+        color: var(--text-light);
+    }
 
-nav a::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: var(--peach-pink);
-    transform: scaleX(0);
-    transform-origin: left;
-    border-radius: 20px;
-    z-index: -1;
-    transition: transform 0.3s ease-in-out;
-}
+    nav a::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: var(--peach-pink);
+        transform: scaleX(0);
+        transform-origin: left;
+        border-radius: 20px;
+        z-index: -1;
+        transition: transform 0.3s ease-in-out;
+    }
 
-nav a:hover::before {
-    transform: scaleX(1);
-}
+    nav a:hover::before {
+        transform: scaleX(1);
+    }
 
 /* Hero Section */
 .hero {
-    background-color: var(--star-yellow);
+    background-color: var(--mario-red);
     padding: 80px 20px;
     box-shadow: inset 0 -10px 10px rgba(0, 0, 0, 0.1);
     position: relative;
@@ -104,34 +104,39 @@ nav a:hover::before {
     border-bottom: 8px solid var(--coin-gold);
 }
 
-.hero::before, .hero::after {
-    content: '';
-    position: absolute;
-    background-color: var(--cloud-white);
-    border-radius: 50%;
-    opacity: 0.8;
-    animation: cloudMove 20s linear infinite;
-}
+    .hero::before, .hero::after {
+        content: '';
+        position: absolute;
+        background-color: var(--cloud-white);
+        border-radius: 50%;
+        opacity: 0.8;
+        animation: cloudMove 20s linear infinite;
+    }
 
-.hero::before {
-    width: 150px;
-    height: 80px;
-    top: 20%;
-    left: -5%;
-    animation-delay: 0s;
-}
+    .hero::before {
+        width: 150px;
+        height: 80px;
+        top: 20%;
+        left: -5%;
+        animation-delay: 0s;
+    }
 
-.hero::after {
-    width: 100px;
-    height: 60px;
-    top: 50%;
-    right: -5%;
-    animation-delay: 10s;
-}
+    .hero::after {
+        width: 100px;
+        height: 60px;
+        top: 50%;
+        right: -5%;
+        animation-delay: 10s;
+    }
 
 @keyframes cloudMove {
-    from { transform: translateX(0); }
-    to { transform: translateX(1200px); }
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(1200px);
+    }
 }
 
 .hero h1 {
@@ -183,32 +188,55 @@ section {
     animation: popUp 0.5s ease-out forwards;
 }
 
-.game-card:hover {
-    transform: scale(1.05);
-}
+    .game-card:hover {
+        transform: scale(1.05);
+    }
 
-.game-card::before {
-    content: '⭐';
-    font-size: 4rem;
-    position: absolute;
-    top: -20px;
-    right: -10px;
-    opacity: 0.5;
-    animation: spin 3s linear infinite;
-}
+    .game-card::before {
+        content: '⭐';
+        font-size: 4rem;
+        position: absolute;
+        top: -20px;
+        right: -10px;
+        opacity: 0.5;
+        animation: spin 3s linear infinite;
+    }
 
-.game-card:nth-child(2)::before { content: '🍄'; animation-delay: 0.5s; }
-.game-card:nth-child(3)::before { content: '🌸'; animation-delay: 1s; }
-.game-card:nth-child(4)::before { content: '👑'; animation-delay: 1.5s; }
+    .game-card:nth-child(2)::before {
+        content: '🍄';
+        animation-delay: 0.5s;
+    }
+
+    .game-card:nth-child(3)::before {
+        content: '🌸';
+        animation-delay: 1s;
+    }
+
+    .game-card:nth-child(4)::before {
+        content: '👑';
+        animation-delay: 1.5s;
+    }
 
 @keyframes popUp {
-    from { transform: scale(0.8); opacity: 0; }
-    to { transform: scale(1); opacity: 1; }
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 
 @keyframes spin {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 .game-card h3 {
@@ -232,34 +260,34 @@ section {
     border-bottom: 8px solid var(--luigi-green);
 }
 
-.cta h2 {
-    font-family: 'Mochiy Pop One', cursive;
-    font-size: 2.5rem;
-    color: var(--text-dark);
-    margin-bottom: 20px;
-    text-shadow: var(--shadow-pop);
-}
+    .cta h2 {
+        font-family: 'Mochiy Pop One', cursive;
+        font-size: 2.5rem;
+        color: var(--text-dark);
+        margin-bottom: 20px;
+        text-shadow: var(--shadow-pop);
+    }
 
-.cta .btn {
-    display: inline-block;
-    padding: 15px 40px;
-    background-color: var(--mario-red);
-    color: var(--text-light);
-    text-decoration: none;
-    border-radius: 50px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    box-shadow: var(--shadow-pop);
-    border: 3px solid var(--text-dark);
-    transform: scale(1);
-}
+    .cta .btn {
+        display: inline-block;
+        padding: 15px 40px;
+        background-color: var(--mario-red);
+        color: var(--text-light);
+        text-decoration: none;
+        border-radius: 50px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        box-shadow: var(--shadow-pop);
+        border: 3px solid var(--text-dark);
+        transform: scale(1);
+    }
 
-.cta .btn:hover {
-    background-color: var(--star-yellow);
-    color: var(--text-dark);
-    transform: scale(1.1);
-}
+        .cta .btn:hover {
+            background-color: var(--star-yellow);
+            color: var(--text-dark);
+            transform: scale(1.1);
+        }
 
 footer {
     padding: 30px 0;
